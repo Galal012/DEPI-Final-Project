@@ -32,8 +32,8 @@ const blogSchema = new mongoose.Schema({
   category: {
     type: String,
     required: [true, 'Blog category is required'],
-    enum: ['maintenance', 'repair', 'tips', 'news', 'reviews', 'guides', 'other'],
-    default: 'other'
+    enum: ['Maintenance', 'Repair', 'Tips', 'News', 'Reviews', 'Guides', 'Other'],
+    default: 'Other'
   },
   tags: [{
     type: String,

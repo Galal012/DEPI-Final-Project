@@ -43,7 +43,7 @@ const Blog: React.FC = () => {
 
       const params: any = { limit: 50 };
       if (activeCategory !== "All") {
-        params.category = activeCategory.toLowerCase(); // Backend expects lowercase
+        params.category = activeCategory;
       }
 
       const response = await blogAPI.getAll(params);

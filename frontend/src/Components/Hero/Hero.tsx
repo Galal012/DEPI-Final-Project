@@ -67,7 +67,7 @@ function Hero() {
 
   return (
     <section
-      className={`relative w-full min-h-[100vh] flex flex-col justify-center bg-cover bg-center transition-all duration-700 ${
+      className={`relative w-full min-h-screen flex flex-col justify-center bg-cover bg-center transition-all duration-700 ${
         isRTL ? "rtl" : "ltr"
       }`}
       style={{ backgroundImage: `url(${images[current]})` }}
