@@ -61,7 +61,6 @@ mongoose
   })
   .catch((error) => {
     console.warn("MongoDB connection failed, using mock data:", error.message);
-    // Continue without MongoDB for development
   });
 
 // Routes

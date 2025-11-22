@@ -30,7 +30,7 @@ const Services: React.FC = () => {
   const fetchServices = async () => {
     try {
       setLoading(true);
-      const response = await servicesAPI.getAll({ limit: 100 }); // Fetch all active services
+      const response = await servicesAPI.getAll({ limit: 100, active: true }); // Fetch all active services
       setServices(response.data.data.services);
     } catch (error) {
       console.error("Error fetching services:", error);
@@ -62,7 +62,7 @@ const Services: React.FC = () => {
   return (
     <div className={`min-h-screen bg-gray-50 ${isRTL ? "rtl" : "ltr"}`}>
       {/* Hero Section */}
-      <div className="bg-gradient-to-r from-slate-900 to-slate-800 text-white py-20">
+      <div className="bg-linear-to-r from-slate-900 to-slate-800 text-white py-20">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -129,11 +129,11 @@ const Services: React.FC = () => {
                       </div>
 
                       {/* Content Section */}
-                      <div className="p-6 flex flex-col flex-grow">
+                      <div className="p-6 flex flex-col grow">
                         <h3 className="text-xl font-bold text-slate-800 mb-2 line-clamp-1">
                           {service.name}
                         </h3>
-                        <p className="text-gray-600 mb-4 text-sm line-clamp-3 flex-grow">
+                        <p className="text-gray-600 mb-4 text-sm line-clamp-3 grow">
                           {service.description}
                         </p>
 

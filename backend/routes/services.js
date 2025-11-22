@@ -59,7 +59,7 @@ router.get(
     query("limit").optional().isInt({ min: 1, max: 100 }),
   ],
   catchAsync(async (req, res, next) => {
-    const { category, featured, active, page = 1, limit = 10 } = req.query;
+    const { category, active, page = 1, limit = 10 } = req.query;
 
     // Build filter
     const filter = {};

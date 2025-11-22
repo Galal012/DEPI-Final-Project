@@ -1,6 +1,5 @@
 const express = require("express");
 const mongoose = require("mongoose");
-const { body } = require("express-validator");
 const { protect, authorize } = require("../middleware/auth");
 const { catchAsync } = require("../middleware/errorHandler");
 const Service = require("../models/Service");
@@ -8,7 +7,6 @@ const Blog = require("../models/Blog");
 const Booking = require("../models/Booking");
 const Contact = require("../models/Contact");
 const User = require("../models/User");
-const AppError = require("../utils/appError");
 
 const router = express.Router();
 
@@ -74,7 +72,7 @@ router.get(
         revenue: monthlyRevenue.length > 0 ? monthlyRevenue[0].total : 0,
         contacts: await Contact.countDocuments({
           createdAt: { $gte: startOfMonth },
-        }), // This could be added
+        }),
       },
       recent: {
         bookings: recentBookings,

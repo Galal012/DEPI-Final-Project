@@ -184,8 +184,7 @@ router.post(
   protect,
   catchAsync(async (req, res, next) => {
     // In a JWT-based system, logout is typically handled on the client side
-    // by removing the token from storage. However, we can add token blacklisting
-    // or other server-side logic here if needed.
+    // by removing the token from storage.
 
     res.status(200).json({
       status: "success",
