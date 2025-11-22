@@ -80,7 +80,7 @@ const Blog: React.FC = () => {
   return (
     <div className={`min-h-screen bg-gray-50 ${isRTL ? "rtl" : "ltr"}`}>
       {/* Hero Section */}
-      <div className="bg-gradient-to-r from-slate-900 to-slate-800 text-white py-20">
+      <div className="bg-linear-to-r from-slate-900 to-slate-800 text-white py-20">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -163,12 +163,12 @@ const Blog: React.FC = () => {
                       </div>
                     </div>
 
-                    <div className="p-6 flex flex-col flex-grow">
+                    <div className="p-6 flex flex-col grow">
                       <h2 className="text-xl font-bold text-slate-800 mb-3 line-clamp-2">
                         {blog.title}
                       </h2>
 
-                      <p className="text-gray-600 mb-4 line-clamp-3 flex-grow">
+                      <p className="text-gray-600 mb-4 line-clamp-3 grow">
                         {blog.excerpt}
                       </p>
 
