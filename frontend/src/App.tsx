@@ -17,6 +17,7 @@ import Login from "./Pages/Login";
 import Register from "./Pages/Register";
 import MakeAppointment from "./Pages/MakeAppointment";
 import Dashboard from "./Pages/Dashboard";
+import WhatsAppButton from "./Components/WhatsAppButton";
 import { Toaster } from "react-hot-toast";
 
 function App() {
@@ -42,6 +43,7 @@ function App() {
         position="top-center" // You can change this to 'top-center', 'bottom-right', etc.
         reverseOrder={false}
       />
+      <WhatsAppButton />
       <TopBar />
       <Navbar />
       <Routes>
