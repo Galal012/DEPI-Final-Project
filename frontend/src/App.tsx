@@ -1,6 +1,5 @@
 import "./index.css";
-import { Routes } from "react-router";
-import { Route } from "react-router";
+import { Routes, Route } from "react-router";
 import { useTranslation } from "react-i18next";
 import { useEffect } from "react";
 import TopBar from "./Components/TopBar";
@@ -40,7 +39,7 @@ function App() {
   return (
     <div className={`min-h-screen ${isRTL ? "rtl" : "ltr"}`}>
       <Toaster
-        position="top-center" // You can change this to 'top-center', 'bottom-right', etc.
+        position="top-center"
         reverseOrder={false}
       />
       <WhatsAppButton />
